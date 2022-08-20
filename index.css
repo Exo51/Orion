@@ -1,0 +1,338 @@
+body{
+    background-color: #303030;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    text-align: center;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.oriontitle{                /*Classe dédiée au titre principal*/
+    font-weight: bold;
+    font-size: 60pt;
+    color: rgb(165, 15, 15);
+    border-bottom: white solid 2px;
+    width: 50%;
+    margin-top: 1.5cm;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centreimage{                  /*Classe dédiée a la première image*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.attentionBox{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: yellow;
+    padding: 1em;
+    margin-top: 1em;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* Classes pour le nav*/
+nav{
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color: #1f1b1b;
+    padding: 4px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.boite :hover, .boiteprincipale :hover{
+    color: gold;
+    /* background-color: black;*/   /* Test pour comprendre comment ça fait le hover que quand on passe sur le texte*/
+    transform: translateY(-5px);
+}
+
+.flexbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boite{
+    display: flex;
+    flex: 1;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    min-width: fit-content;
+    width: auto;
+    padding: 5px;
+}
+
+.flexbox a{  /*Cible tout les liens "a" qui se trouve dans la classe navig (le > indique que les classes internes ne sont pas ciblées)*/ 
+    transition: 150ms ease-in-out;
+    color: white;
+    text-decoration: none;
+    margin: auto;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+
+.boiteprincipale{
+    display: flex;
+    flex: 1;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    border-bottom: white solid 2px;
+}
+
+
+/*Fin des classes pour le nav*/
+
+section{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.box{
+    width: 100%;
+    margin: 2px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boitetaille{
+    max-width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 12em;
+}
+
+
+.boxcenter{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 35pt;
+    width: 100%;
+    border-bottom: white solid 2px;    
+}
+
+.link{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1em;
+    border: outset;
+    border-color: white;
+    border-radius: 1em;
+}
+
+.largetitle{
+    font-weight: bold;
+    font-size: 40pt;
+    width: 100%;
+    border-bottom: white solid 2px;
+    margin-bottom: 1.5cm;
+    margin-top: 1.5cm;
+    text-align: center;
+}
+
+p{
+    word-wrap: break-word;
+}
+
+.log{
+    padding: 1em;
+    width: 50%;
+    background-color: black;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    margin: 2em;
+}
+
+.logInfo{
+    width: 80%;
+    /* margin-left: auto; */
+    margin-right: auto;
+    background-color: grey;
+    border-radius: 5px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    word-wrap: break-word;
+    /* min-width: fit-content; */
+}
+
+/* Classes pour le Footer */
+footer{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 5em;
+}
+
+.footbox{
+    display: flex;
+    flex: 1;
+    width: auto;
+    margin: 1em;
+    background-color: red;
+    text-align: center;
+}
+
+.footbox p, .footbox > a{
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    vertical-align: center;
+    background-color: green;
+    height: fit-content;
+}
+
+@media (max-width: 640px)
+{
+    .oriontitle{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 750px)
+{
+    .title{
+        font-size: 30px;
+    }
+}
+
+
+
+/*Menu déroulant*/
+/*
+
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #1f1b1b;
+    position: sticky;
+    top: 0px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+    color: white;
+}
+
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: #1f1b1b;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav > ul li:hover .sous{
+    display: block;
+}
+
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+
+.deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+.conteneur{
+  margin: 50px 20px;
+  height: 1500px;
+}   
+
+Partie HTML -------------------------------------
+<nav>
+     <ul>
+        <li class="deroulant"><a href="#">Modules &ensp;</a>
+        <ul class="sous">
+            <li><a href="Commerce.html">Commerce</a></li>
+            <li><a href="#">Forage</a></li>
+            <li><a href="#">Armement</a></li>
+            <li><a href="#">Bouclier</a></li>
+            <li><a href="#">Soutient</a></li>
+        </ul>
+        </li>
+        <li class="deroulant"><a href="#">Étoiles &ensp;</a>
+        <ul class="sous">
+            <li><a href="#">Étoile Jaune</a></li>
+            <li><a href="#">Étoile Rouge</a></li>
+            <li><a href="#">Étoile Bleue</a></li>
+            <li><a href="#">Étoile Blanche</a></li>
+        </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">A propos</a></li>
+    </ul>
+</nav>
+*/
