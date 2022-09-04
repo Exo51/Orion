@@ -1,0 +1,270 @@
+body{
+    background-color: #303030;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    text-align: center;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/*Classe dédiée au titre principal*/
+.oriontitle{
+    font-weight: bold;
+    font-size: 60pt;
+    color: rgb(165, 15, 15);
+    border-bottom: white solid 2px;
+    width: 50%;
+    margin-top: 1.5cm;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Classe dédiée a la première image*/
+.centreimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 100%;
+}
+
+
+/* =================================== NAV =================================== */
+
+
+nav{
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #1f1b1b;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    padding: 4px;
+    margin-top: 2em;
+}
+
+/* Sert a supprimer la décoration des liens + Applique le temps d'animation pour le hover */
+nav a{
+    text-decoration: none;
+    color: white;
+    transition: 150ms ease-in-out;
+}
+
+/* Div visant a contenir les différents navBox en ligne par groupe de 3 */
+.navFlexbox{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* Div visant a contenir un lien unique du Nav */
+.navBox{
+    display: flex;
+    flex: auto;
+    background-color: brown;
+    font-size: 2em;
+    font-weight: bold;
+    justify-content: center;
+    width: auto;
+    padding: 4px;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+/* Div visant a contenir un lien importany du Nav */
+.navMainBox{
+    display: flex;
+    flex: auto;
+    background-color: brown;
+    font-size: 38px;
+    font-weight: bold;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 8px;
+    border-bottom: white solid 2px;
+    margin: 4px;
+}
+
+/* Animation au passage de la sourie */
+.navBox :hover, .navMainBox :hover{
+    color: gold;
+    transform: translateY(-5px);
+}
+
+/* Media Query responsive pour le Nav */
+@media screen and (max-width: 700px)
+{
+    .navFlexbox{
+        flex-direction: column;
+    }
+}
+
+
+
+/* =================================== SECTION =================================== */
+
+section{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2em;
+}
+
+/* Div ayant pour but de regrouper les Div Logs & ToDo ensemble */
+.indexInfoBox{
+    display: flex;
+    flex-direction: row;
+    /* border: solid 2px white; */
+    padding: 8px;
+    justify-content: space-evenly;
+    align-items: flex-start /* Permet aux deux flex-childs de ne pas avoir la même hauteur */
+}
+
+/* Div regroupant tous les logs */
+.indexLogs{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    background-color: grey;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+/* Permet de modifier le titre de la section des logs */
+.indexBoxTitle{
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Une Box contenant les logs du jours */
+.logsBox{
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    background-color: #303030;
+    width: 90%;
+    margin: 4px auto;
+    border: 2px white dashed;
+    border-radius: 6px;
+    word-wrap: break-word;
+}
+
+/* A mettre avant une .logsBox, a pour but d'afficher la date dans le format voulu */
+.logDate{
+    text-align: center;
+    font-style: italic;
+    color: black;
+}
+
+/* Div présentant la To Do List */
+.indexTodo{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    background-color: grey;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+/* Une partie de la ToDoList */
+.todoBox{
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    background-color: #303030;
+    width: 90%;
+    margin: 4px auto;
+    border: 2px white dashed;
+    border-radius: 6px;
+    word-wrap: break-word;
+}
+
+.todoText{
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 700px)
+{
+    .indexInfoBox{
+        flex-direction: column;
+    }
+
+    .indexLogs{
+        width: 90%;
+        margin: 1em;
+    }
+
+    .indexTodo{
+        width: 90%;
+        margin: 1em;
+    }
+}
+
+.indexLogs:hover{
+    background-image: linear-gradient(to right, grey, gray, grey, grey, yellow, grey);
+    background-size: 300%;
+    background-repeat: repeat-x;
+    animation: colorRotateHC 3s linear 0s infinite;
+    -webkit-background-clip: border-box;
+    background-clip: text;
+    /* color: transparent; */
+}
+
+@keyframes colorRotateHC {
+    0%{background-position:0% 51%}
+    50%{background-position:150% 100%}
+    100%{background-position:300% 0%}
+}
+
+
+/* =================================== FOOTER =================================== */
+
+/* Le footer en lui-même */
+footer{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 5em;
+    justify-content: space-evenly;
+    border-radius: 1em;
+}
+
+/* Appliquer aux texte du footer, afin de styliser un peu */
+footer p {
+    padding: 6px;
+    margin: 1em;
+    border-bottom: 1px solid white;
+    width: 50%;
+    text-align: center;
+}
+
+/* Media Query responsive pour le Footer */
+@media screen and (min-width: 700px)
+{
+    footer p{
+        width: 20%;
+    }
+}
+
+/* C'est la mais ça sert pas... Encore */
+/* .footBox{
+    display: flex;
+    flex: auto;
+    width: auto;
+    margin: 1em;
+    background-color: red;
+    justify-content: center;
+} */
