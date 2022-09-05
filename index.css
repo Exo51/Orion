@@ -32,6 +32,18 @@ header{
     width: 100%;
 }
 
+/* Au cas ou y a besoin de mettre un message */
+.attentionBox{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: yellow;
+    padding: 1em;
+    margin-top: 1em;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
 
 /* =================================== NAV =================================== */
 
@@ -98,7 +110,7 @@ nav a{
 }
 
 /* Media Query responsive pour le Nav */
-@media screen and (max-width: 700px)
+@media screen and (max-width: 500px)
 {
     .navFlexbox{
         flex-direction: column;
@@ -155,6 +167,7 @@ section{
     border: 2px white dashed;
     border-radius: 6px;
     word-wrap: break-word;
+    margin-bottom: 1em;
 }
 
 /* A mettre avant une .logsBox, a pour but d'afficher la date dans le format voulu */
@@ -185,6 +198,7 @@ section{
     border: 2px white dashed;
     border-radius: 6px;
     word-wrap: break-word;
+    margin-bottom: 1em;
 }
 
 .todoText{
@@ -195,7 +209,7 @@ section{
     margin: 0 auto;
 }
 
-@media screen and (max-width: 700px)
+@media screen and (max-width: 500px)
 {
     .indexInfoBox{
         flex-direction: column;
@@ -212,8 +226,17 @@ section{
     }
 }
 
-.indexLogs:hover{
+/* .indexLogs:hover{
     background-image: linear-gradient(to right, grey, gray, grey, grey, yellow, grey);
+    background-size: 300%;
+    background-repeat: repeat-x;
+    animation: colorRotateHC 3s linear 0s infinite;
+    -webkit-background-clip: border-box;
+    background-clip: text;
+} */
+
+.attentionBox{
+    background-image: linear-gradient(to right, grey, yellow, yellow, grey);
     background-size: 300%;
     background-repeat: repeat-x;
     animation: colorRotateHC 3s linear 0s infinite;
@@ -228,6 +251,68 @@ section{
     100%{background-position:300% 0%}
 }
 
+
+.largeTitle{
+    font-weight: bold;
+    font-size: 40pt;
+    width: 100%;
+    border-bottom: white solid 2px;
+    margin-bottom: 1.5cm;
+    margin-top: 1.5cm;
+    text-align: center;
+}
+
+.partBox{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 2px;
+    padding: 5px;
+    justify-content: space-evenly;
+    align-items: flex-start 
+}
+
+.elementBox{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: flex-start;
+}
+
+.boxTitle{
+    display: flex;
+    font-weight: bold;
+    font-size: 35pt;
+    width: 100%;
+    border-bottom: white solid 2px;
+    justify-content: center;
+}
+
+.elementBox a{
+    margin: 0 auto;
+}
+
+.link{
+    display: flex;
+    padding: 1em;
+    border: outset;
+    border-color: white;
+    border-radius: 1em;
+    justify-content: center;
+}
+
+@media screen and (max-width: 500px)
+{
+    .partBox{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .elementBox{
+        width: 90%;
+        margin: 1em;
+    }
+}
 
 /* =================================== FOOTER =================================== */
 
@@ -252,7 +337,7 @@ footer p {
 }
 
 /* Media Query responsive pour le Footer */
-@media screen and (min-width: 700px)
+@media screen and (min-width: 500px)
 {
     footer p{
         width: 20%;
