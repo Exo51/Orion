@@ -303,7 +303,7 @@ footer p {
 }
 
 
-@media screen and (max-width: 500px)
+@media screen and (max-width: 700px)
 {
     /* Media Query Responsive pour les elements de Tutos*/
     .partBox{
