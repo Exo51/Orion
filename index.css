@@ -109,15 +109,6 @@ nav a{
     transform: translateY(-5px);
 }
 
-/* Media Query responsive pour le Nav */
-@media screen and (max-width: 500px)
-{
-    .navFlexbox{
-        flex-direction: column;
-    }
-}
-
-
 
 /* =================================== SECTION =================================== */
 
@@ -209,22 +200,6 @@ section{
     margin: 0 auto;
 }
 
-@media screen and (max-width: 500px)
-{
-    .indexInfoBox{
-        flex-direction: column;
-    }
-
-    .indexLogs{
-        width: 90%;
-        margin: 1em;
-    }
-
-    .indexTodo{
-        width: 90%;
-        margin: 1em;
-    }
-}
 
 /* .indexLogs:hover{
     background-image: linear-gradient(to right, grey, gray, grey, grey, yellow, grey);
@@ -251,7 +226,7 @@ section{
     100%{background-position:300% 0%}
 }
 
-
+/* Titre de partie */
 .largeTitle{
     font-weight: bold;
     font-size: 40pt;
@@ -262,6 +237,7 @@ section{
     text-align: center;
 }
 
+/* Contient des .elementsBox */
 .partBox{
     display: flex;
     flex-direction: row;
@@ -272,6 +248,7 @@ section{
     align-items: flex-start 
 }
 
+/* Contient un tutos */
 .elementBox{
     display: flex;
     flex-direction: column;
@@ -279,6 +256,7 @@ section{
     align-items: flex-start;
 }
 
+/* Titre d'un element de Tuto */
 .boxTitle{
     display: flex;
     font-weight: bold;
@@ -292,6 +270,7 @@ section{
     margin: 0 auto;
 }
 
+/* Met en avant les liens */
 .link{
     display: flex;
     padding: 1em;
@@ -299,19 +278,6 @@ section{
     border-color: white;
     border-radius: 1em;
     justify-content: center;
-}
-
-@media screen and (max-width: 500px)
-{
-    .partBox{
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .elementBox{
-        width: 90%;
-        margin: 1em;
-    }
 }
 
 /* =================================== FOOTER =================================== */
@@ -334,6 +300,41 @@ footer p {
     border-bottom: 1px solid white;
     width: 50%;
     text-align: center;
+}
+
+
+@media screen and (max-width: 500px)
+{
+    /* Media Query Responsive pour les elements de Tutos*/
+    .partBox{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .elementBox{
+        width: 90%;
+        margin: 1em;
+    }
+
+    /* Media Query Responsive pour la page d'accueil */
+    .indexInfoBox{
+        flex-direction: column;
+    }
+
+    .indexLogs{
+        width: 90%;
+        margin: 1em;
+    }
+
+    .indexTodo{
+        width: 90%;
+        margin: 1em;
+    }
+
+    /* Media Query Responsive pour le Nav */
+    .navFlexbox{
+        flex-direction: column;
+    }
 }
 
 /* Media Query responsive pour le Footer */
